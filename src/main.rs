@@ -14,6 +14,16 @@ use::ratatui::{
 
 use  std::io::{stdout, Result};
 
-fn main() {
-    println!("Hello, world!");
+fn main() -> Result<()> {
+    stdout().execute(EnterAlternateScreen)?;
+    enable_raw_mode()?;
+
+    let mut terminal = Terminal::new (CrosstermBackend::new(stdout()))?;
+    terminal.clear()?;
+
+    // TODO main loop
+
+    stdout().execute(LeaveAlternateScreen)?;
+    disable_raw_mode()?;
+    Ok(())
 }
