@@ -12,6 +12,7 @@ use::ratatui::{
     widgets::Paragraph,
 };
 
+use  std::io::{stdout, Result};
 
 fn main() {
     println!("Hello, world!");
