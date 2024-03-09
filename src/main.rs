@@ -7,6 +7,11 @@ use crossterm::{
     ExecutableCommand,
 };
 
+use::ratatui::{
+    prelude::{CrosstermBackend, Stylize, Terminal},
+    widgets::Paragraph,
+};
+
 
 fn main() {
     println!("Hello, world!");
