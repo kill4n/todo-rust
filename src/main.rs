@@ -21,7 +21,10 @@ fn main() -> Result<()> {
     let mut terminal = Terminal::new (CrosstermBackend::new(stdout()))?;
     terminal.clear()?;
 
-    // TODO main loop
+    loop {
+        // TODO draw the UI
+        // TODO handle input
+    }
 
     stdout().execute(LeaveAlternateScreen)?;
     disable_raw_mode()?;
